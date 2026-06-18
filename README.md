@@ -1,22 +1,30 @@
 # Mutual Fund Analytics Capstone
 
-## Overview
+## About the Project
 
-This project focuses on analyzing mutual fund data using Python, SQL, and data analytics techniques. The objective is to build an end-to-end analytics pipeline that covers data ingestion, cleaning, exploratory data analysis (EDA), performance evaluation, and advanced analytics on mutual fund datasets.
+This project was developed as part of my Data Analytics learning journey to understand how mutual fund data can be analyzed using Python, SQL, and Power BI.
 
-The project uses multiple datasets containing NAV history, fund performance metrics, SIP inflows, AUM growth, investor transactions, portfolio holdings, and benchmark indices.
+The goal was to build a complete analytics pipeline starting from raw datasets and ending with interactive dashboards and advanced fund analysis. Throughout the project, I worked on data cleaning, exploratory analysis, performance evaluation, risk analysis, and dashboard development.
+
+Using datasets related to NAV history, fund performance, SIP inflows, investor transactions, portfolio holdings, and benchmark indices, I explored how different mutual funds perform and what factors influence their risk and return characteristics.
+
+The project combines technical skills such as Python programming, SQL querying, data visualization, and Power BI dashboarding with financial analytics concepts like CAGR, Sharpe Ratio, Sortino Ratio, Alpha, Beta, Value at Risk (VaR), and portfolio concentration risk.
 
 ---
 
-## Project Objectives
+## What I Learned
 
-- Build a structured data analytics workflow for mutual fund data.
-- Perform data cleaning and validation on raw datasets.
-- Create a SQLite database for efficient storage and querying.
-- Generate meaningful visualizations and insights through EDA.
-- Evaluate fund performance using key financial metrics.
-- Compare funds against benchmark indices.
-- Develop analytical reports to support investment-related decision making.
+During this project, I gained hands-on experience in:
+
+- Working with real-world financial datasets
+- Data cleaning and preprocessing
+- SQL database design and querying
+- Exploratory Data Analysis (EDA)
+- Financial performance metrics
+- Risk analytics
+- Interactive dashboard creation using Power BI
+- Building simple recommendation systems
+- Project documentation and version control using GitHub
 
 ---
 
@@ -29,8 +37,23 @@ The project uses multiple datasets containing NAV history, fund performance metr
 - Seaborn
 - Plotly
 - SQLite
-- SQLAlchemy
+- SQL
+- Power BI
 - Jupyter Notebook
+- Git & GitHub
+
+---
+
+## Project Workflow
+
+Raw Data
+→ Data Cleaning
+→ SQLite Database
+→ Exploratory Data Analysis
+→ Performance Analytics
+→ Advanced Analytics
+→ Power BI Dashboard
+→ Insights & Reporting
 
 ---
 
@@ -38,6 +61,9 @@ The project uses multiple datasets containing NAV history, fund performance metr
 
 ```text
 bluestock_mf_capstone/
+│
+├── dashboard/
+│   └── Mutual_Fund_Analytics_Dashboard.pbix
 │
 ├── data/
 │   ├── raw/
@@ -52,8 +78,13 @@ bluestock_mf_capstone/
 │   └── 05_advanced_analytics.ipynb
 │
 ├── reports/
+│   └── figures/
 │
 ├── scripts/
+│   ├── live_nav_fetch.py
+│   ├── compute_metrics.py
+│   ├── etl_pipeline.py
+│   └── recommender.py
 │
 ├── sql/
 │   ├── schema.sql
@@ -65,66 +96,217 @@ bluestock_mf_capstone/
 
 ---
 
-## Work Completed
+# Work Completed
 
-### Day 1 – Data Ingestion
-- Loaded and validated multiple mutual fund datasets.
-- Performed initial dataset inspection.
-- Fetched live NAV data through API integration.
-- Established project folder structure and version control.
+## Day 1 – Data Ingestion
 
-### Day 2 – Data Cleaning & Database Design
-- Cleaned and standardized datasets.
-- Handled missing values and duplicate records.
-- Designed SQLite database schema.
-- Created analytical SQL queries and data dictionary.
-
-### Day 3 – Exploratory Data Analysis
-- NAV trend analysis.
-- AUM growth analysis.
-- SIP inflow trends.
-- Category-wise inflow heatmaps.
-- Investor demographic analysis.
-- Geographic distribution analysis.
-- Folio growth analysis.
-- Correlation analysis.
-- Sector allocation analysis.
-
-### Day 4 – Fund Performance Analytics
-- Daily return calculations.
-- CAGR comparison.
-- Sharpe Ratio analysis.
-- Sortino Ratio analysis.
-- Alpha and Beta evaluation.
-- Maximum Drawdown analysis.
-- Fund scorecard generation.
-- Benchmark comparison.
-- Tracking error analysis.
+- Loaded raw mutual fund datasets
+- Performed schema validation
+- Created project structure
+- Integrated live NAV API
+- Version control setup using Git
 
 ---
 
-## Key Insights
+## Day 2 – Data Cleaning & Database Design
 
-- SIP inflows showed consistent growth across the observed period.
-- Large-cap and liquid funds attracted significant investor interest.
-- Certain fund houses demonstrated stronger AUM growth than peers.
-- Fund performance varied considerably across categories.
-- Risk-adjusted metrics provided a clearer picture than absolute returns alone.
-- Benchmark comparison highlighted funds with superior long-term performance.
+- Missing value treatment
+- Duplicate handling
+- Data standardization
+- SQLite database creation
+- SQL schema implementation
+- Data dictionary preparation
 
 ---
 
-## Outputs
+## Day 3 – Exploratory Data Analysis
 
-The project generates:
+Performed detailed EDA on:
 
-- Cleaned datasets
-- SQLite database
-- Analytical SQL queries
-- Data dictionary
-- Performance scorecards
-- Visualizations and charts
-- Benchmark comparison reports
+- NAV Trends
+- AUM Growth
+- SIP Inflow Trends
+- Category-wise Inflows
+- Investor Demographics
+- Geographic Distribution
+- Folio Growth
+- Fund Correlation Analysis
+- Sector Allocation
+
+Generated 15+ analytical visualizations.
+
+---
+
+## Day 4 – Fund Performance Analytics
+
+Calculated:
+
+- Daily Returns
+- CAGR (1Y, 3Y, 5Y)
+- Sharpe Ratio
+- Sortino Ratio
+- Alpha
+- Beta
+- Maximum Drawdown
+- Tracking Error
+
+Generated:
+
+- Fund Scorecard
+- Benchmark Comparison Reports
+- Performance Rankings
+
+---
+
+## Day 5 – Interactive Dashboard Development
+
+Built Power BI dashboards featuring:
+
+### Industry Overview Dashboard
+
+- Total AUM
+- Total Funds
+- Average Expense Ratio
+- Average Returns
+- AUM by Fund House
+- SIP Trend Analysis
+- Category Inflows
+- Sector Allocation
+
+### Fund Analytics Dashboard
+
+- Risk vs Return Analysis
+- Risk Grade Distribution
+- Expense Ratio Comparison
+- Top Funds by Returns
+- Dynamic Filters & Slicers
+
+---
+
+## Day 6 – Advanced Analytics
+
+Implemented:
+
+### Value at Risk (VaR)
+
+Estimated downside risk of funds.
+
+### Conditional VaR (CVaR)
+
+Measured expected tail loss.
+
+### Rolling Sharpe Ratio
+
+Analyzed risk-adjusted performance over time.
+
+### Cohort Analysis
+
+Investor behavior comparison across investment cohorts.
+
+### SIP Continuity Analysis
+
+Identified SIP gaps and continuity trends.
+
+### Sector Concentration Risk
+
+Calculated Herfindahl-Hirschman Index (HHI).
+
+### Fund Recommendation Engine
+
+Built a rule-based recommendation system using:
+
+- Risk Category
+- Sharpe Ratio
+- Fund Ranking
+
+---
+
+## Day 7 – Dashboard Enhancement & Reporting
+
+- Dashboard polishing
+- Filter integration
+- Visual optimization
+- Cross-filter validation
+- Export-ready reporting
+- Final project packaging
+
+---
+
+# Key Insights
+
+### Industry Trends
+
+- SIP inflows exhibited strong growth throughout the study period.
+- Equity-oriented schemes attracted higher investor participation.
+- SBI Mutual Fund maintained significant AUM leadership.
+
+### Risk & Performance
+
+- Higher returns did not always correspond to higher risk-adjusted performance.
+- Sharpe and Sortino ratios offered better fund evaluation than raw returns.
+- Several funds consistently outperformed benchmark indices.
+
+### Portfolio Analytics
+
+- Banking and IT sectors dominated portfolio allocations.
+- Certain schemes displayed high concentration risk.
+- Diversified portfolios generally showed lower downside risk.
+
+---
+
+# Dashboard Features
+
+### Industry Overview
+
+- AUM Analysis
+- SIP Trends
+- Sector Allocation
+- Category Inflows
+
+### Fund Analytics
+
+- Risk vs Return
+- Expense Ratio Comparison
+- Fund Rankings
+- Dynamic Filtering
+
+---
+
+# Outputs Generated
+
+### Reports
+
+- Fund Scorecard
+- Alpha-Beta Analysis
+- CAGR Comparison
+- Tracking Error Report
+
+### Advanced Analytics
+
+- VaR/CVaR Reports
+- Cohort Analysis
+- SIP Continuity Report
+- Sector HHI Analysis
+
+### Dashboard
+
+- Interactive Power BI Dashboard
+
+### Scripts
+
+- ETL Pipeline
+- Live NAV Fetcher
+- Fund Recommender
+
+---
+
+# Future Improvements
+
+- Machine Learning-based Fund Recommendation
+- Portfolio Optimization Models
+- Real-Time Market Integration
+- Streamlit Web Application
+- Automated Report Generation
 
 ---
 
@@ -134,4 +316,24 @@ The project generates:
 
 B.Tech (Computer Science & Engineering)
 
-Data Analytics & Data Science Enthusiast
+I am passionate about Data Science, Data Analytics, and solving real-world problems using data. This project helped me strengthen my skills in Python, SQL, Power BI, and financial data analysis.
+
+GitHub: https://github.com/sumit3219/bluestock_mf_capstone
+
+---
+
+## Project Status
+
+✅ Data Ingestion Completed
+
+✅ Data Cleaning Completed
+
+✅ EDA Completed
+
+✅ Performance Analytics Completed
+
+✅ Advanced Analytics Completed
+
+✅ Dashboard Development Completed
+
+✅ Project Ready for Submission
